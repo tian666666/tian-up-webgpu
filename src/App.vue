@@ -1,7 +1,7 @@
 <!--
  * @Author: TYW
  * @Date: 2022-02-22 18:05:50
- * @LastEditTime: 2022-04-04 16:39:22
+ * @LastEditTime: 2022-04-04 20:08:15
  * @LastEditors: TYW
  * @Description: 
 -->
@@ -15,7 +15,8 @@
     |
     <router-link to="/Lesson003">Lesson003</router-link>
     |
-   
+    <router-link to="/Lesson004">Lesson004</router-link>
+    |
   </div>
   <router-view />
 </template>
