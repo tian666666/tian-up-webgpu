@@ -1,12 +1,14 @@
 <!--
  * @Author: TYW
  * @Date: 2022-02-22 18:05:50
- * @LastEditTime: 2022-04-04 14:41:16
+ * @LastEditTime: 2022-04-04 15:14:04
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
   <div id="nav" class="nav">
+    <router-link to="/Home">Home</router-link>
+    |
     <router-link to="/Lesson001">Lesson001</router-link>
     |
     <router-link to="/Lesson002">Lesson002</router-link>
@@ -91,7 +93,6 @@
     |
     <router-link to="/Lesson003">Lesson003</router-link>
     |
-    
   </div>
   <router-view />
 </template>

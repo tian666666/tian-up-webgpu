@@ -1,21 +1,20 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 15:32:18
- * @LastEditTime: 2022-04-04 15:02:51
+ * @LastEditTime: 2022-04-04 15:02:56
  * @LastEditors: TYW
  * @Description:
  */
 import { WebGPUInstance } from './WebGPUInstance';
 import { Shaders } from './ShaderUtil';
 export const CreateTriangle = async (
-  domID: string,
-  color = '(0.0,1.0,0.0,1.0)'
+  domID: string
 ) => {
   const IWebGPU = await WebGPUInstance(domID);
   if (!IWebGPU) {
     return null;
   }
-  const shader = Shaders(color);
+  const shader = Shaders();
 
   const pipeline = (await IWebGPU.Device?.createRenderPipelineAsync({
     vertex: {

@@ -1,7 +1,7 @@
 /*
  * @Author: TYW
  * @Date: 2022-02-22 18:05:50
- * @LastEditTime: 2022-04-04 14:37:55
+ * @LastEditTime: 2022-04-04 15:06:23
  * @LastEditors: TYW
  * @Description:
  */
@@ -15,18 +15,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/Lesson001',
     name: 'Lesson001',
     component: () => import('../views/webgpu/Lesson001/views/Lesson001.vue')
+  },
+  {
+    path: '/Lesson002',
+    name: 'Lesson002',
+    component: () => import('../views/webgpu/Lesson002/views/Lesson002.vue')
   }
 ];
 
