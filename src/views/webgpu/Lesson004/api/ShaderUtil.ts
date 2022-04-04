@@ -1,15 +1,15 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-04 13:23:05
- * @LastEditTime: 2022-04-04 20:05:38
+ * @LastEditTime: 2022-04-04 21:51:32
  * @LastEditors: TYW
  * @Description:
  */
 export const Shaders = () => {
   const vertex = `  
     struct Output {
-        @builtin(position) Position : vec4<f32>;
-        @location(0) vColor : vec4<f32>;
+        @builtin(position) Position : vec4<f32>,
+        @location(0) vColor : vec4<f32>
     };
 
     @stage(vertex)

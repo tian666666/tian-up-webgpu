@@ -1,20 +1,24 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 21:46:39
+ * @LastEditTime: 2022-04-04 20:22:43
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
   <div class="containerT">
-    <div class="containerF">
-      <h1>Crete Triangle</h1>
+    <div class="contianerF">
+      <h1>Create Square using GPU Buffer</h1>
       <div>
-        <div>Color:</div>
-        <input type="text" v-model="inputColor" />
+        <div><b>Input a primitive type:</b></div>
+        <div>
+          optional primitive types: point-list line-list line-strip
+          triangle-list triangle-strip
+        </div>
+        <input type="text" v-model="primitiveType" />
       </div>
     </div>
-    <div id="lesson001_container" class="containerG"></div>
+    <div id="lesson005_container" class="containerG"></div>
   </div>
 </template>
 
@@ -23,22 +27,22 @@ import { run } from '../api/Run';
 import { defineComponent, onMounted, ref, watch } from 'vue';
 export default defineComponent({
   setup() {
+    let primitiveType = ref('triangle-list');
     onMounted(() => {
-      run('lesson001_container');
+      run('lesson005_container', primitiveType.value);
     });
-    let inputColor = ref('(0.0,1.0,0.0,1.0)');
     watch(
-      () => inputColor.value,
+      () => primitiveType.value,
       newVal => {
-        run('lesson001_container', newVal);
+        debugger;
+        run('lesson005_container', newVal);
       }
     );
-    return { inputColor };
+    return { primitiveType };
   }
 });
 </script>
 <style scoped>
-
 .containerT {
   width: 100%;
   height: 100%;

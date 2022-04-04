@@ -1,14 +1,14 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 20:15:54
+ * @LastEditTime: 2022-04-04 20:22:21
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
   <div class="containerT">
     <div class="contianerF">
-      <h1>Create Point or Line Primitives</h1>
+      <h1>Create Triangle Primitives</h1>
       <div>
         <div><b>Input a primitive type:</b></div>
         <div>

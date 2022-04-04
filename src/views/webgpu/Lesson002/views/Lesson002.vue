@@ -1,16 +1,16 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 15:04:47
+ * @LastEditTime: 2022-04-04 21:45:19
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
-  <div class="lesson002_container">
-    <div>
+  <div class="containerT">
+    <div class="containerF">
       <h1>Triangle with Vertex</h1>
     </div>
-    <div id="lesson002_container" class="lesson002_container"></div>
+    <div id="lesson002_container" class="containerG"></div>
   </div>
 </template>
 
@@ -27,9 +27,18 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.lesson002_container {
-  background: white;
+
+.containerT {
   width: 100%;
   height: 100%;
+}
+.containerF {
+  height: 8rem;
+  width: 100%;
+}
+.containerG {
+  background: black;
+  width: 100%;
+  height: calc(100% - 12rem);
 }
 </style>

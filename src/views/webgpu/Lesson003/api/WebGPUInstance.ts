@@ -1,22 +1,23 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 15:35:35
- * @LastEditTime: 2022-04-04 14:35:10
+ * @LastEditTime: 2022-04-04 21:15:13
  * @LastEditors: TYW
  * @Description:
  */
 import { CheckWebGPU } from './WebGPUCheck';
 interface IGPUInstance {
-  WebGPU: GPUCanvasContext | null;
-  Adapter: GPUAdapter | null;
-  Device: GPUDevice | null;
-  Format: GPUTextureFormat | string;
+  WebGPU: GPUCanvasContext;
+  Adapter: GPUAdapter;
+  Device: GPUDevice;
+  Format: GPUTextureFormat;
+  Canvas: HTMLCanvasElement
 }
 interface IWebGPU extends GPUCanvasContext {
   customValue?: string;
 }
 
-export const WebGPUInstance = async (canvasContainerID: string) => {
+export const InitWebGPU = async (canvasContainerID: string) => {
   const checkgpu = CheckWebGPU();
   if (!checkgpu.isSupportWebGPU) {
     console.error(checkgpu.desc);
@@ -64,7 +65,8 @@ export const WebGPUInstance = async (canvasContainerID: string) => {
     WebGPU: webgpu,
     Adapter: adapter,
     Device: device,
-    Format: format
+    Format: format,
+    Canvas: canvas
   };
   return gpuRes;
 };
