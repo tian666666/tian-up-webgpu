@@ -1,14 +1,14 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 14:36:09
+ * @LastEditTime: 2022-04-04 15:52:22
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
   <div class="lesson001_container">
     <div>
-      <div>Crete Triangle</div>
+      <h1>Crete Triangle</h1>
       <div>
         <div>Color:</div>
         <input type="text" v-model="inputColor" />
