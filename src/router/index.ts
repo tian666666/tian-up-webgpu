@@ -1,7 +1,7 @@
 /*
  * @Author: TYW
  * @Date: 2022-02-22 18:05:50
- * @LastEditTime: 2022-03-08 19:52:11
+ * @LastEditTime: 2022-04-04 14:37:55
  * @LastEditors: TYW
  * @Description:
  */
@@ -26,17 +26,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/Lesson001',
     name: 'Lesson001',
-    component: () => import('../views/webgl/Lesson001/views/Lesson001.vue')
-  },
-  {
-    path: '/Lesson002',
-    name: 'Lesson002',
-    component: () => import('../views/webgl/Lesson002/views/Lesson002.vue')
-  },
-  {
-    path: '/Lesson003',
-    name: 'Lesson003',
-    component: () => import('../views/webgl/Lesson003/views/Lesson003.vue')
+    component: () => import('../views/webgpu/Lesson001/views/Lesson001.vue')
   }
 ];
 
