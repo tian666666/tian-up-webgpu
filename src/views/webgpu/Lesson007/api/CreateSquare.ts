@@ -1,16 +1,17 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 15:32:18
- * @LastEditTime: 2022-04-04 23:13:51
+ * @LastEditTime: 2022-04-05 00:03:24
  * @LastEditors: TYW
  * @Description:
  */
-import { CreateGPUBuffer, CreateGPUBufferUint, InitWebGPU } from './WebGPUInstance';
+import {
+  CreateGPUBuffer,
+  CreateGPUBufferUint,
+  InitWebGPU
+} from './WebGPUInstance';
 import { Shaders } from './ShaderUtil';
-export const CreateSquare = async (
-  domID: string,
-  color = '(0.0,1.0,0.0,1.0)'
-) => {
+export const CreateSquare = async (domID: string) => {
   const IWebGPU = await InitWebGPU(domID);
   if (!IWebGPU) {
     return null;
@@ -43,7 +44,7 @@ export const CreateSquare = async (
     0 // vertex d
   ]);
 
-  const indexData = new Uint32Array([0,1,3,3,1,2]);
+  const indexData = new Uint32Array([0, 1, 3, 3, 1, 2]);
   const vertexBuffer = CreateGPUBuffer(device, vertexData);
   const indexBuffer = CreateGPUBufferUint(device, indexData);
 
@@ -97,7 +98,7 @@ export const CreateSquare = async (
 
   renderPass.setPipeline(pipeline);
   renderPass.setVertexBuffer(0, vertexBuffer);
-  renderPass.setIndexBuffer(indexBuffer, "uint32");
+  renderPass.setIndexBuffer(indexBuffer, 'uint32');
   renderPass.drawIndexed(6);
   renderPass.end();
 

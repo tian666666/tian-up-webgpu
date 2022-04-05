@@ -1,7 +1,7 @@
 /*
  * @Author: TYW
  * @Date: 2022-02-22 18:05:50
- * @LastEditTime: 2022-04-04 23:06:19
+ * @LastEditTime: 2022-04-04 23:16:07
  * @LastEditors: TYW
  * @Description:
  */
@@ -48,6 +48,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/Lesson007',
     name: 'Lesson007',
     component: () => import('../views/webgpu/Lesson007/views/Lesson007.vue')
+  },
+  {
+    path: '/Lesson008',
+    name: 'Lesson008',
+    component: () => import('../views/webgpu/Lesson008/views/Lesson008.vue')
   }
 ];
 

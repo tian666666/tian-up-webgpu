@@ -1,7 +1,7 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 20:22:21
+ * @LastEditTime: 2022-04-05 00:06:34
  * @LastEditors: TYW
  * @Description: 
 -->
@@ -34,7 +34,6 @@ export default defineComponent({
     watch(
       () => primitiveType.value,
       newVal => {
-        debugger;
         run('lesson004_container', newVal);
       }
     );

@@ -1,7 +1,7 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 20:22:43
+ * @LastEditTime: 2022-04-05 00:05:53
  * @LastEditors: TYW
  * @Description: 
 -->
@@ -29,13 +29,12 @@ export default defineComponent({
   setup() {
     let primitiveType = ref('triangle-list');
     onMounted(() => {
-      run('lesson005_container', primitiveType.value);
+      run('lesson005_container');
     });
     watch(
       () => primitiveType.value,
       newVal => {
-        debugger;
-        run('lesson005_container', newVal);
+        run('lesson005_container');
       }
     );
     return { primitiveType };

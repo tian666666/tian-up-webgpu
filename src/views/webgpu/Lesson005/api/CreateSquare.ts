@@ -1,16 +1,13 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 15:32:18
- * @LastEditTime: 2022-04-04 21:08:18
+ * @LastEditTime: 2022-04-05 00:06:03
  * @LastEditors: TYW
  * @Description:
  */
 import { CreateGPUBuffer, InitWebGPU } from './WebGPUInstance';
 import { Shaders } from './ShaderUtil';
-export const CreateSquare = async (
-  domID: string,
-  color = '(0.0,1.0,0.0,1.0)'
-) => {
+export const CreateSquare = async (domID: string) => {
   const IWebGPU = await InitWebGPU(domID);
   if (!IWebGPU) {
     return null;
@@ -102,7 +99,7 @@ export const CreateSquare = async (
 
   const renderPassColorAttachment: GPURenderPassColorAttachment = {
     view: textureView,
-    clearValue: {r: 0.2, g: 0.247, b: 0.314, a: 1.0},
+    clearValue: { r: 0.2, g: 0.247, b: 0.314, a: 1.0 },
     loadValue: { r: 0.2, g: 0.247, b: 0.314, a: 1.0 }, // background color
     loadOp: 'clear',
     storeOp: 'store'

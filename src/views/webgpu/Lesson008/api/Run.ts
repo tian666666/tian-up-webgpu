@@ -1,11 +1,11 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 10:39:13
- * @LastEditTime: 2022-04-05 00:03:38
+ * @LastEditTime: 2022-04-05 00:07:38
  * @LastEditors: TYW
  * @Description:
  */
-import { CreateSquare } from './CreateSquare';
+import { Create3DObject } from './Create3DObject';
 export const run = (domID: string) => {
-  CreateSquare(domID);
+  Create3DObject(domID);
 };

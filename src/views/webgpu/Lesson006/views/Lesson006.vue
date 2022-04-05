@@ -1,7 +1,7 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 22:57:26
+ * @LastEditTime: 2022-04-05 00:04:56
  * @LastEditors: TYW
  * @Description: 
 -->
@@ -18,7 +18,7 @@
         <input type="text" v-model="primitiveType" />
       </div>
     </div>
-    <div id="lesson005_container" class="containerG"></div>
+    <div id="lesson006_container" class="containerG"></div>
   </div>
 </template>
 
@@ -29,13 +29,12 @@ export default defineComponent({
   setup() {
     let primitiveType = ref('triangle-list');
     onMounted(() => {
-      run('lesson005_container', primitiveType.value);
+      run('lesson006_container');
     });
     watch(
       () => primitiveType.value,
       newVal => {
-        debugger;
-        run('lesson005_container', newVal);
+        run('lesson006_container');
       }
     );
     return { primitiveType };

@@ -1,14 +1,14 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-04 22:57:26
+ * @LastEditTime: 2022-04-05 00:05:27
  * @LastEditors: TYW
  * @Description: 
 -->
 <template>
   <div class="containerT">
     <div class="contianerF">
-      <h1>Create Square using a Single GPU Buffer</h1>
+      <h1>Create Square using Index GPU Buffer</h1>
       <div>
         <div><b>Input a primitive type:</b></div>
         <div>
@@ -18,7 +18,7 @@
         <input type="text" v-model="primitiveType" />
       </div>
     </div>
-    <div id="lesson005_container" class="containerG"></div>
+    <div id="lesson007_container" class="containerG"></div>
   </div>
 </template>
 
@@ -29,13 +29,12 @@ export default defineComponent({
   setup() {
     let primitiveType = ref('triangle-list');
     onMounted(() => {
-      run('lesson005_container', primitiveType.value);
+      run('lesson007_container');
     });
     watch(
       () => primitiveType.value,
       newVal => {
-        debugger;
-        run('lesson005_container', newVal);
+        run('lesson007_container');
       }
     );
     return { primitiveType };

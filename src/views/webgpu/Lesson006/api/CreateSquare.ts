@@ -1,16 +1,13 @@
 /*
  * @Author: TYW
  * @Date: 2022-04-03 15:32:18
- * @LastEditTime: 2022-04-04 22:53:28
+ * @LastEditTime: 2022-04-05 00:04:27
  * @LastEditors: TYW
  * @Description:
  */
 import { CreateGPUBuffer, InitWebGPU } from './WebGPUInstance';
 import { Shaders } from './ShaderUtil';
-export const CreateSquare = async (
-  domID: string,
-  color = '(0.0,1.0,0.0,1.0)'
-) => {
+export const CreateSquare = async (domID: string) => {
   const IWebGPU = await InitWebGPU(domID);
   if (!IWebGPU) {
     return null;
