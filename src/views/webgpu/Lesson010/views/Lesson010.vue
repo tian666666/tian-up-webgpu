@@ -1,7 +1,7 @@
 <!--
  * @Author: TYW
  * @Date: 2022-04-03 10:38:19
- * @LastEditTime: 2022-04-12 20:57:11
+ * @LastEditTime: 2022-04-12 20:50:53
  * @LastEditors: TYW
  * @Description: 
 -->
@@ -15,7 +15,7 @@
         <input type="text" v-model="cameraType" />
       </div>
     </div>
-    <div id="lesson009_container" class="containerG"></div>
+    <div id="lesson010_container" class="containerG"></div>
   </div>
 </template>
 
@@ -26,12 +26,12 @@ export default defineComponent({
   setup() {
     let cameraType = ref('Animation');
     onMounted(() => {
-      run('lesson009_container', cameraType.value === 'Animation' );
+      run('lesson010_container', cameraType.value === 'Animation');
     });
     watch(
       () => cameraType.value,
       newVal => {
-        run('lesson009_container', newVal === 'Animation');
+        run('lesson010_container', newVal === 'Animation');
       }
     );
     return { cameraType };
